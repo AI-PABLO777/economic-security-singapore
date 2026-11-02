@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналіз економічної безпеки Сингапуру — Економічна безпека країни</title>
+  <meta name="description" content="Оцінювання економічної безпеки Республіки Сингапур за 9 індикаторами: порогові значення, графіки, тенденції, загрози, висновки.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Головне меню">
+      <a class="brand" href="index.html"><span class="brand-flag" aria-hidden="true"></span>Економічна безпека країни</a>
+      <button class="nav-toggle" aria-label="Меню" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="analysis.html" aria-current="page">Аналіз: Сингапур</a></li>
+        <li><a href="#conclusion">Висновки</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Аналітична сторінка</div>
+      <h1>Економічна безпека Республіки Сингапур</h1>
+      <p class="lead">Я оцінив економічну безпеку Сингапуру за 2015–2025 роки за дев’ятьма індикаторами. Кожне фактичне значення порівнюю з пороговими інтервалами та визначаю рівень безпеки: від «оптимального» до «абсолютної небезпеки». Далі розраховую інтегральну оцінку, визначаю тенденції й основні загрози.</p>
+      <ul class="toc">
+        <li><a href="#summary">Зведені результати</a></li>
+        <li><a href="#integral">Інтегральна оцінка</a></li>
+        <li><a href="#g-cereal">Зернові</a></li>
+        <li><a href="#g-le">Тривалість життя</a></li>
+        <li><a href="#g-imr">Смертність немовлят</a></li>
+        <li><a href="#g-cover">Покриття імпорту</a></li>
+        <li><a href="#g-rd">НДДКР</a></li>
+        <li><a href="#g-ineq">Нерівність доходів</a></li>
+        <li><a href="#g-debt">Державний борг</a></li>
+        <li><a href="#trends">Тенденції</a></li>
+        <li><a href="#threats-sec">Загрози</a></li>
+        <li><a href="#conclusion">Висновок</a></li>
+        <li><a href="#method">Методика та джерела</a></li>
+      </ul>
+    </section>
+
+    <section id="key" style="margin-top:24px">
+      <div class="grid grid-4" id="kpis"></div>
+    </section>
+
+    <section id="summary" class="card">
+      <h2>Ключові показники економічної безпеки</h2>
+      <p>Для кожного показника наведено останнє доступне значення, оптимальний інтервал і фактичний інтервал, у який потрапляє значення, а також рівень економічної безпеки та бал (оптимальний — 5, задовільний — 4, незадовільний — 3, небезпечний — 2, критичний — 1, абсолютна небезпека — 0).</p>
+      <div class="table-wrap">
+        <table id="summary-table">
+          <thead><tr><th>№</th><th>Показник</th><th>Од.</th><th class="num">Рік</th><th class="num">Факт</th><th class="num">Оптимум</th><th class="num">Інтервал факту</th><th>Рівень безпеки</th><th class="num">Бал</th><th>Тенденція</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 style="margin-top:22px">Бальна оцінка показників</h3>
+      <div id="score-chart"></div>
+    </section>
+
+    <section id="integral" class="card">
+      <h2>Інтегральна оцінка економічної безпеки</h2>
+      <p>Інтегральна оцінка — це середнє арифметичне балів усіх показників, для яких є дані. Урожайність зернових виключено: даних немає. Для останнього доступного року кожного показника оцінка становить <b data-integral></b> бала, що відповідає рівню <b>«незадовільний»</b>.</p>
+      <div id="integral-scale" class="table-wrap"></div>
+      <h3 style="margin-top:20px">Динаміка інтегральної оцінки (роки з повним набором із 8 показників)</h3>
+      <div class="indicator-grid stack">
+        <div id="integral-chart"></div>
+        <div class="table-wrap">
+          <table id="integral-table">
+            <thead><tr><th>Рік</th><th class="num">ТЖ ж</th><th class="num">ТЖ ч</th><th class="num">СН д</th><th class="num">СН х</th><th class="num">Покр.</th><th class="num">НДДКР</th><th class="num">Дох.</th><th class="num">Борг</th><th class="num">Σ/8</th><th>Рівень</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <p class="muted">ТЖ — тривалість життя (ж — жінки, ч — чоловіки); СН — смертність немовлят (д — дівчата, х — хлопчики); Покр. — коефіцієнт покриття імпорту експортом; Дох. — співвідношення доходів 10/10.</p>
+      <p>У 2015–2016 роках інтегральна оцінка становила 3,63 бала («задовільний»), а у 2022 році знизилася до 3,25 бала («незадовільний»). Основні причини погіршення — перехід витрат на НДДКР із задовільної до незадовільної зони та вихід коефіцієнта покриття імпорту експортом за межі оптимуму.</p>
+    </section>
+
+    <div id="indicators" class="grid" style="gap:28px; margin-bottom:36px"></div>
+
+    <section id="trends" class="grid grid-2">
+      <div class="card">
+        <h2>Безпечні тенденції</h2>
+        <ul id="safe-trends"></ul>
+      </div>
+      <div class="card">
+        <h2>Небезпечні тенденції</h2>
+        <ul id="danger-trends"></ul>
+      </div>
+    </section>
+
+    <section id="threats-sec">
+      <h2>Основні загрози економічній безпеці Сингапуру</h2>
+      <div class="grid grid-2" id="threats"></div>
+    </section>
+
+    <section id="conclusion" class="card conclusion">
+      <h2>Узагальнений аналітичний висновок</h2>
+      <p>Я проаналізував дев’ять індикаторів за 2015–2025 роки. Інтегральна оцінка економічної безпеки Сингапуру — <b data-integral></b> бала з 5, тобто формально рівень <b>«незадовільний»</b>. Протягом періоду оцінка повільно знижувалася: з 3,63 у 2015 році до 3,25 у 2022 році.</p>
+      <p><b>Сильні сторони.</b> Соціально-демографічна складова безпеки — на оптимальному рівні. Очікувана тривалість життя (85,6 року для жінок і 81,2 року для чоловіків) і смертність немовлят (2,1–2,3 ‰) належать до найкращих у світі. Це свідчить про високу якість життя, охорони здоров’я та людського капіталу.</p>
+      <p><b>Зовнішньоекономічна складова</b> — на межі оптимуму. Сингапур стабільно має профіцит торгівлі: коефіцієнт покриття імпорту експортом становить 1,25 (2025 рік, «задовільний»). Проте у 2022–2024 роках він виходив у незадовільну зону, а надзвичайна відкритість економіки (оборот понад 300 % ВВП) робить країну вразливою до зовнішніх шоків.</p>
+      <p><b>Слабкі місця.</b> Найгірші оцінки отримали фінансова та соціально-розподільна складові. Борг центрального уряду (167,8 % ВВП) і співвідношення доходів 10/10 (19,8 разу) перебувають у зоні «абсолютна небезпека». Інноваційна складова (НДДКР — 1,81 % ВВП) — на незадовільному рівні з тенденцією до зниження.</p>
+      <p><b>Застереження щодо методики.</b> Формальна оцінка частково перебільшує ризики. Державний борг Сингапуру повністю покритий активами держави й не використовується для фінансування поточних видатків. Нерівність розраховано за доходами від зайнятості до трансфертів; після трансфертів і податків коефіцієнт Джині (0,359) значно нижчий. Отже, реальний рівень економічної безпеки Сингапуру можна оцінити як <b>задовільний</b>, але з чітко визначеними зонами ризику.</p>
+      <p><b>Рекомендації:</b> 1) підвищити витрати на НДДКР щонайменше до 2–3 % ВВП; 2) посилити адресну підтримку домогосподарств 1–2 децилів і програми підвищення кваліфікації; 3) утримувати темпи нарощування боргу в межах зростання державних активів; 4) диверсифікувати ринки збуту й джерела імпорту, зокрема продовольства (стратегія «30 by 30»); 5) запровадити постійний моніторинг індикаторів економічної безпеки на основі відкритих даних.</p>
+    </section>
+
+    <section id="method" class="card">
+      <h2>Методика та джерела даних</h2>
+      <ol>
+        <li>Зібрано статистичні дані з World Bank Open Data (World Development Indicators) за кодами показників, визначеними в завданні, а також із Департаменту статистики Сингапуру (SingStat, портал data.gov.sg) для децильних доходів.</li>
+        <li>Розраховано похідні показники: коефіцієнт покриття імпорту експортом (експорт % ВВП / імпорт % ВВП) та співвідношення доходів 10-го і 1-го децилів.</li>
+        <li>Кожне значення віднесено до порогового інтервалу та визначено рівень економічної безпеки.</li>
+        <li>Рівні переведено в бали (5–0) і розраховано інтегральну оцінку як середній бал.</li>
+        <li>Тенденції визначено за динамікою значень і зміною рівня безпеки від першого до останнього року.</li>
+      </ol>
+      <ul class="muted">
+        <li><a href="https://data.worldbank.org/indicator/AG.YLD.CREL.KG?locations=SG" target="_blank" rel="noopener">AG.YLD.CREL.KG</a> — урожайність зернових (немає даних для Сингапуру)</li>
+        <li><a href="https://data.worldbank.org/indicator/SP.DYN.LE00.FE.IN?locations=SG" target="_blank" rel="noopener">SP.DYN.LE00.FE.IN</a>, <a href="https://data.worldbank.org/indicator/SP.DYN.LE00.MA.IN?locations=SG" target="_blank" rel="noopener">SP.DYN.LE00.MA.IN</a> — тривалість життя</li>
+        <li><a href="https://data.worldbank.org/indicator/SP.DYN.IMRT.FE.IN?locations=SG" target="_blank" rel="noopener">SP.DYN.IMRT.FE.IN</a>, <a href="https://data.worldbank.org/indicator/SP.DYN.IMRT.MA.IN?locations=SG" target="_blank" rel="noopener">SP.DYN.IMRT.MA.IN</a> — смертність немовлят</li>
+        <li><a href="https://data.worldbank.org/indicator/NE.EXP.GNFS.ZS?locations=SG" target="_blank" rel="noopener">NE.EXP.GNFS.ZS</a>, <a href="https://data.worldbank.org/indicator/NE.IMP.GNFS.ZS?locations=SG" target="_blank" rel="noopener">NE.IMP.GNFS.ZS</a> — експорт та імпорт</li>
+        <li><a href="https://data.worldbank.org/indicator/GB.XPD.RSDV.GD.ZS?locations=SG" target="_blank" rel="noopener">GB.XPD.RSDV.GD.ZS</a> — витрати на НДДКР</li>
+        <li><a href="https://data.worldbank.org/indicator/SI.DST.10TH.10?locations=SG" target="_blank" rel="noopener">SI.DST.10TH.10</a>, <a href="https://data.worldbank.org/indicator/SI.DST.FRST.10?locations=SG" target="_blank" rel="noopener">SI.DST.FRST.10</a> — немає даних; замінено на <a href="https://data.gov.sg/datasets/d_1dc0ffa8e519eb9a069db01c8dab6bf0/view" target="_blank" rel="noopener">SingStat: доходи за децилями</a> та <a href="https://data.gov.sg/datasets/d_6d878eb9c5a47f54fee7ce496f681e8d/view" target="_blank" rel="noopener">ключові індикатори доходів (Джині)</a></li>
+        <li><a href="https://data.worldbank.org/indicator/GC.DOD.TOTL.GD.ZS?locations=SG" target="_blank" rel="noopener">GC.DOD.TOTL.GD.ZS</a> — борг центрального уряду</li>
+      </ul>
+      <p class="muted">Дані завантажено 02.11.2026.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <span>© <span data-year>2026</span> Карнаух Віталій Сергійович. Вебсайт «Економічна безпека країни».</span>
+      <span>ДТЕУ · ФІТ · <span data-year>2026</span></span>
+    </div>
+  </footer>
+  <script src="js/raw-data.js"></script>
+  <script src="js/model.js"></script>
+  <script src="js/content.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/analysis.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
