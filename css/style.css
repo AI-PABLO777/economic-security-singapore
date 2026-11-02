@@ -161,6 +161,11 @@ tbody tr:hover { background: #fafaf8; }
   .facts { grid-template-columns: 1fr 1fr; }
   .info-list li { flex-direction: column; gap: 0; }
   .btn.secondary { margin-left: 0; }
+  .chart { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .chart svg { min-width: 600px; }
+  #summary-table { min-width: 860px; }
+  #integral-table { min-width: 620px; }
+  h2 { font-size: 22px; }
 }
 @media print {
   .site-header, .nav-toggle { display: none; }
